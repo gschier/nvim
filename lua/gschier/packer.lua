@@ -12,6 +12,9 @@ return require('packer').startup(function(use)
   use { 'catppuccin/nvim', as = 'catppuccin' }
   use { 'itchyny/lightline.vim', as = 'lightline' }
   use { 'numToStr/Comment.nvim', as = 'comment' }
+  use { 'NvChad/nvim-colorizer.lua', as = 'colorizer' }
+  use { 'lukas-reineke/indent-blankline.nvim', as = 'indent-blankline' }
+  use { 'windwp/nvim-autopairs', as = 'autopairs' }
 
   use {
     'nvim-tree/nvim-tree.lua',
@@ -41,6 +44,9 @@ return require('packer').startup(function(use)
       { 'hrsh7th/nvim-cmp' },
       { 'hrsh7th/cmp-nvim-lsp' },
       { 'L3MON4D3/LuaSnip' },
+
+      -- Cmp icons
+      { 'onsails/lspkind.nvim' },
     }
   }
 

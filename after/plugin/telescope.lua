@@ -1,18 +1,13 @@
 local builtin = require('telescope.builtin')
-local utils = require('telescope.utils')
 
 require('telescope').setup({
-  defaults = {
-    vimgrep_arguments = {
-      "rg",
-      "-L",
-      "--color=never",
-      "--no-heading",
-      "--with-filename",
-      "--line-number",
-      "--column",
-      "--smart-case",
+  pickers = {
+    find_files = {
+      hidden = true,
+      ignore = true,
     },
+  },
+  defaults = {
     prompt_prefix = "   ",
     selection_caret = "  ",
     entry_prefix = "  ",
@@ -34,7 +29,7 @@ require('telescope').setup({
       preview_cutoff = 120,
     },
     file_sorter = require("telescope.sorters").get_fuzzy_file,
-    file_ignore_patterns = { "node_modules" },
+    file_ignore_patterns = { "node_modules", "^.git/.*" },
     generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
     path_display = { "truncate" },
     winblend = 0,
