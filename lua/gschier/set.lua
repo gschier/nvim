@@ -30,10 +30,11 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = 'yes'
-vim.opt.colorcolumn = '80'
 vim.opt.updatetime = 50
 
 vim.g.mapleader = " "
 
 -- For auto-session
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
+vim.cmd('colorscheme catppuccin')

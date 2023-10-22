@@ -1,4 +1,5 @@
 require('lualine').setup({
+  extensions = { 'toggleterm', 'nvim-tree' },
   options = {
     icons_enabled = true,
     theme = 'auto',

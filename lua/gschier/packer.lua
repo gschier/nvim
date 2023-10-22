@@ -10,11 +10,20 @@ return require('packer').startup(function(use)
   use { 'tpope/vim-fugitive', as = 'fugitive' }
   use { 'loctvl842/monokai-pro.nvim', as = 'monokai-pro' }
   use { 'catppuccin/nvim', as = 'catppuccin' }
+  use { 'dracula/vim', as = 'dracula' }
   use { 'numToStr/Comment.nvim', as = 'comment' }
   use { 'NvChad/nvim-colorizer.lua', as = 'colorizer' }
   use { 'lukas-reineke/indent-blankline.nvim', as = 'indent-blankline' }
   use { 'windwp/nvim-autopairs', as = 'autopairs' }
   use { 'akinsho/toggleterm.nvim', as = 'toggleterm' }
+  use { '0x00-ketsu/autosave.nvim', as = 'autosave' }
+
+  use {
+    'prochri/telescope-all-recent.nvim',
+    requires = {
+      { 'kkharji/sqlite.lua' }
+    },
+  }
 
   use {
     'nvim-lualine/lualine.nvim',
@@ -33,6 +42,11 @@ return require('packer').startup(function(use)
     tag = '0.1.4',
     as = 'telescope',
     requires = { { 'nvim-lua/plenary.nvim' } }
+  }
+
+  use {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
   }
 
   use {
