@@ -1,9 +1,6 @@
 require('toggleterm').setup({
   open_mapping = '<C-s>',
-  direction = 'float',
-  winbar = {
-    enabled = true,
-  },
+  direction = 'vertical',
   size = function(term)
     if term.direction == "horizontal" then
       return 15

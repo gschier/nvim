@@ -1,5 +1,6 @@
+local telescope = require('telescope')
 local builtin = require('telescope.builtin')
-local telescope = require('telescope');
+local actions = require('telescope.actions')
 
 telescope.setup({
   pickers = {
@@ -7,8 +8,21 @@ telescope.setup({
       hidden = true,
       ignore = true,
     },
+    buffers = {
+      sort_mru = true,
+      mappings = {
+        i = { ["<C-d>"] = actions.delete_buffer },
+      },
+    },
   },
   defaults = {
+    mappings = {
+      i = {
+        ["<C-n>"] = actions.move_selection_next,
+        ["<C-e>"] = actions.move_selection_previous,
+        ["<ESC>"] = actions.close, -- Don't allow escaping to command mode
+      },
+    },
     prompt_prefix = "   ",
     selection_caret = "  ",
     entry_prefix = "  ",
@@ -43,9 +57,6 @@ telescope.setup({
     qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
     -- Developer configurations: Not meant for general override
     buffer_previewer_maker = require("telescope.previewers").buffer_previewer_maker,
-    mappings = {
-      n = { ["q"] = require("telescope.actions").close },
-    },
   }
 })
 

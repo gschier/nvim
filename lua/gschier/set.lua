@@ -1,3 +1,4 @@
+--
 -- Show line numbers
 vim.opt.number = true
 

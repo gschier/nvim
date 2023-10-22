@@ -6,8 +6,9 @@ vim.keymap.set("", "<C-\\>", ":NvimTreeFocus<CR>", {});
 -- OR setup with some options
 require('nvim-tree').setup({
   sort_by = "case_sensitive",
+  update_focused_file = { enable = true },
   view = {
-    width = 30,
+    width = 35,
   },
   filters = {
     dotfiles = false,

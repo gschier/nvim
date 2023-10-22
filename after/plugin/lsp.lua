@@ -15,7 +15,6 @@ require('mason-lspconfig').setup({
   handlers = { lsp_zero.default_setup },
 })
 
-
 cmp.setup({
   preselect = 'item',
   completion = {
