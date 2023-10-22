@@ -10,11 +10,16 @@ return require('packer').startup(function(use)
   use { 'tpope/vim-fugitive', as = 'fugitive' }
   use { 'loctvl842/monokai-pro.nvim', as = 'monokai-pro' }
   use { 'catppuccin/nvim', as = 'catppuccin' }
-  use { 'itchyny/lightline.vim', as = 'lightline' }
   use { 'numToStr/Comment.nvim', as = 'comment' }
   use { 'NvChad/nvim-colorizer.lua', as = 'colorizer' }
   use { 'lukas-reineke/indent-blankline.nvim', as = 'indent-blankline' }
   use { 'windwp/nvim-autopairs', as = 'autopairs' }
+  use { 'akinsho/toggleterm.nvim', as = 'toggleterm' }
+
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
 
   use {
     'nvim-tree/nvim-tree.lua',
@@ -48,15 +53,5 @@ return require('packer').startup(function(use)
       -- Cmp icons
       { 'onsails/lspkind.nvim' },
     }
-  }
-
-  use {
-    'akinsho/toggleterm.nvim',
-    tag = '*',
-    config = function()
-      require('toggleterm').setup({
-        open_mapping = '<C-s>',
-      })
-    end
   }
 end)

@@ -3,7 +3,7 @@ vim.opt.number = true
 
 -- Set the terminal title
 vim.opt.title = true
-vim.opt.titlestring = '%f'
+vim.opt.titlestring = '%{substitute(getcwd(), "^.*/", "", "")}%{empty(FugitiveHead())?"":("  ["..FugitiveHead().."]")}'
 
 -- Indentation
 vim.opt.smartindent = true

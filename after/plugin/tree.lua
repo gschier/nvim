@@ -1,7 +1,7 @@
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
-vim.keymap.set("", "<C-[>", ":NvimTreeFocus<CR>", {});
+vim.keymap.set("", "<C-\\>", ":NvimTreeFocus<CR>", {});
 
 -- OR setup with some options
 require('nvim-tree').setup({
@@ -18,7 +18,7 @@ require('nvim-tree').setup({
       return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
     end
     -- api.config.mappings.default_on_attach(bufnr)
-    vim.keymap.set('n', '<C-[>', api.tree.close, opts('Close'))
+    vim.keymap.set('n', '<C-\\>', api.tree.close, opts('Close'))
 
     -- NOTE: Modify the defaults to not conflict with Colemak (eg. `e` for edit)
 
