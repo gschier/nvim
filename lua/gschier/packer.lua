@@ -55,12 +55,8 @@ return require('packer').startup(function(use)
     config = function()
       require('monokai-pro').setup({
         filter = 'octagon',
+        terminal_colors = true,
         transparent_background = true,
-      })
-      require('telescope').setup({
-        defaults = {
-          borderchars = { "█", " ", "▀", "█", "█", " ", " ", "▀" },
-        }
       })
       vim.cmd('colorscheme monokai-pro')
     end
@@ -77,12 +73,5 @@ return require('packer').startup(function(use)
       })
     end
   }
-
-  use({
-	"Pocco81/auto-save.nvim",
-	config = function()
-     require("auto-save").setup()
-	end
-  })
 end)
 
