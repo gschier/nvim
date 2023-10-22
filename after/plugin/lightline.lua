@@ -1,4 +1,4 @@
 vim.g['lightline'] = {
-  colorscheme = 'monokaipro',
+  colorscheme = 'catppuccin',
   component = {filename = '%f'},
 }
