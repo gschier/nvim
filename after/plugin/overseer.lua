@@ -4,6 +4,6 @@ require('overseer').setup({
   },
 })
 
-vim.keymap.set('n', '<C-r>', ':OverseerToggle<CR>', {})
+vim.keymap.set('n', '<C-t>', ':OverseerToggle<CR>', {})
 vim.keymap.set('n', '<leader>or', ':OverseerRun<CR>', {})
 vim.keymap.set('n', '<leader>ol', ':OverseerLoadBundle<CR>:OverseerOpen<CR>', {})

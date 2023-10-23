@@ -1,4 +1,5 @@
-require('autosave').setup({
-  debounce_delay = 500
-});
-vim.g.auto_save = 1
+-- require('autosave').setup({
+--   debounce_delay = 800
+-- });
+-- Disabled for now
+-- vim.g.auto_save = 1

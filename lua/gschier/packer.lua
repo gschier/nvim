@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
   use { '0x00-ketsu/autosave.nvim', as = 'autosave' }
   use { 'stevearc/overseer.nvim', as = 'overseer' }
   use { 'stevearc/dressing.nvim', as = 'dressing' }
+  use { 'AndrewRadev/tagalong.vim', as = 'tagalong' }
 
   use {
     'prochri/telescope-all-recent.nvim',
