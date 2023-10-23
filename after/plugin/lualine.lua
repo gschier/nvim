@@ -1,5 +1,5 @@
 require('lualine').setup({
-  extensions = { 'toggleterm', 'nvim-tree' },
+  extensions = { 'toggleterm', 'nvim-tree', 'overseer' },
   options = {
     icons_enabled = true,
     theme = 'auto',
@@ -11,7 +11,7 @@ require('lualine').setup({
       { 'filename', separator = { left = '' }, right_padding = 2 },
     },
     lualine_b = { 'branch', 'diff', 'diagnostics' },
-    lualine_c = {},
+    lualine_c = { 'overseer' },
     lualine_x = {},
     lualine_y = { 'filetype' },
     lualine_z = {
