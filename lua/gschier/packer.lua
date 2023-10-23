@@ -17,6 +17,8 @@ return require('packer').startup(function(use)
   use { 'windwp/nvim-autopairs', as = 'autopairs' }
   use { 'akinsho/toggleterm.nvim', as = 'toggleterm' }
   use { '0x00-ketsu/autosave.nvim', as = 'autosave' }
+  use { 'stevearc/overseer.nvim', as = 'overseer' }
+  use { 'stevearc/dressing.nvim', as = 'dressing' }
 
   use {
     'prochri/telescope-all-recent.nvim',
@@ -27,7 +29,7 @@ return require('packer').startup(function(use)
 
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    requires = { 'nvim-tree/nvim-web-devicons' }
   }
 
   use {
@@ -46,7 +48,7 @@ return require('packer').startup(function(use)
 
   use {
     "folke/trouble.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    requires = { "nvim-tree/nvim-web-devicons" },
   }
 
   use {

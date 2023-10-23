@@ -9,6 +9,7 @@ telescope.setup({
       ignore = true,
     },
     buffers = {
+      ignore_current_buffer = true,
       sort_mru = true,
       mappings = {
         i = { ["<C-d>"] = actions.delete_buffer },
@@ -55,8 +56,6 @@ telescope.setup({
     file_previewer = require("telescope.previewers").vim_buffer_cat.new,
     grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
     qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
-    -- Developer configurations: Not meant for general override
-    buffer_previewer_maker = require("telescope.previewers").buffer_previewer_maker,
   }
 })
 
@@ -65,3 +64,4 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fc', function() builtin.live_grep({ search_dirs = { "%:p" } }) end, {})

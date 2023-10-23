@@ -32,3 +32,5 @@ cmp.setup({
 })
 
 vim.keymap.set('n', '<C-j>', '<cmd>lua vim.lsp.buf.hover()<cr>', {})
+vim.keymap.set('', '<F6>', '<cmd>lua vim.lsp.buf.rename()<cr>', {})
+vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', {})
