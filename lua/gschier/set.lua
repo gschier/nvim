@@ -1,5 +1,6 @@
 -- Show line numbers
 vim.opt.number = true
+vim.wo.relativenumber = true
 
 -- Set the terminal title
 vim.opt.title = true

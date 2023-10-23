@@ -24,6 +24,7 @@ telescope.setup({
         ["<ESC>"] = actions.close, -- Don't allow escaping to command mode
       },
     },
+    path_display = { "smart" },
     prompt_prefix = "   ",
     selection_caret = "  ",
     entry_prefix = "  ",
@@ -47,7 +48,6 @@ telescope.setup({
     file_sorter = require("telescope.sorters").get_fuzzy_file,
     file_ignore_patterns = { "node_modules", "^.git/.*" },
     generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
-    path_display = { "truncate" },
     winblend = 0,
     border = {},
     borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },

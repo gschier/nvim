@@ -20,55 +20,28 @@ return require('packer').startup(function(use)
   use { 'stevearc/overseer.nvim', as = 'overseer' }
   use { 'stevearc/dressing.nvim', as = 'dressing' }
   use { 'AndrewRadev/tagalong.vim', as = 'tagalong' }
+  use { 'github/copilot.vim', as = 'copilot' }
+  use { 'RRethy/vim-illuminate', as = 'illuminate' }
+  use { 'petertriho/nvim-scrollbar', as = 'scrollbar' }
+  use { 'prochri/telescope-all-recent.nvim', requires = { { 'kkharji/sqlite.lua' } } }
+  use { 'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons' } }
+  use { 'nvim-tree/nvim-tree.lua', requires = { 'nvim-tree/nvim-web-devicons', } }
+  use { 'nvim-telescope/telescope.nvim', tag = '0.1.4', as = 'telescope', requires = { { 'nvim-lua/plenary.nvim' } } }
+  use { 'folke/trouble.nvim', requires = { 'nvim-tree/nvim-web-devicons' } }
 
-  use {
-    'prochri/telescope-all-recent.nvim',
-    requires = {
-      { 'kkharji/sqlite.lua' }
-    },
-  }
+  use { 'VonHeikemen/lsp-zero.nvim', as = 'lspzero', branch = 'v3.x', requires = {
+    { 'williamboman/mason.nvim' },
+    { 'williamboman/mason-lspconfig.nvim' },
 
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons' }
-  }
+    -- LSP Support
+    { 'neovim/nvim-lspconfig' },
 
-  use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons',
-    },
-  }
+    -- Autocompletion
+    { 'hrsh7th/nvim-cmp' },
+    { 'hrsh7th/cmp-nvim-lsp' },
+    { 'L3MON4D3/LuaSnip' },
 
-  use {
-    'nvim-telescope/telescope.nvim',
-    tag = '0.1.4',
-    as = 'telescope',
-    requires = { { 'nvim-lua/plenary.nvim' } }
-  }
-
-  use {
-    "folke/trouble.nvim",
-    requires = { "nvim-tree/nvim-web-devicons" },
-  }
-
-  use {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v3.x',
-    requires = {
-      { 'williamboman/mason.nvim' },
-      { 'williamboman/mason-lspconfig.nvim' },
-
-      -- LSP Support
-      { 'neovim/nvim-lspconfig' },
-
-      -- Autocompletion
-      { 'hrsh7th/nvim-cmp' },
-      { 'hrsh7th/cmp-nvim-lsp' },
-      { 'L3MON4D3/LuaSnip' },
-
-      -- Cmp icons
-      { 'onsails/lspkind.nvim' },
-    }
-  }
+    -- Cmp icons
+    { 'onsails/lspkind.nvim' },
+  } }
 end)
