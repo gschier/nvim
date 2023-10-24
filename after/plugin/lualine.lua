@@ -19,7 +19,7 @@ require('lualine').setup({
     },
     lualine_z = {
       { 'progress', padding = { right = 1 } },
-      { 'location', separator = { right = '' }, padding = { right = 1 } },
+      { 'location', separator = { right = '' }, padding = { left = 1 } },
     }
   },
   inactive_sections = {

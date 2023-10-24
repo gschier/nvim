@@ -1,5 +1,4 @@
--- require('autosave').setup({
---   debounce_delay = 800
--- });
--- Disabled for now
--- vim.g.auto_save = 1
+require('autosave').setup({
+  prompt_style = 'stdout',
+  events = { 'InsertLeave' },
+});

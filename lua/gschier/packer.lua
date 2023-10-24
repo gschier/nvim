@@ -22,6 +22,7 @@ return require('packer').startup(function(use)
   use { 'AndrewRadev/tagalong.vim', as = 'tagalong' }
   use { 'github/copilot.vim', as = 'copilot' }
   use { 'RRethy/vim-illuminate', as = 'illuminate' }
+  use { 'rcarriga/nvim-notify', as = 'notify' }
   use { 'petertriho/nvim-scrollbar', as = 'scrollbar' }
   use { 'prochri/telescope-all-recent.nvim', requires = { { 'kkharji/sqlite.lua' } } }
   use { 'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons' } }

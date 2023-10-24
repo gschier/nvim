@@ -1,7 +1,7 @@
 local colors = require('catppuccin.palettes').get_palette('mocha');
 
 
-require("scrollbar").setup({
+require('scrollbar').setup({
   handle = {
     color = colors.surface1,
     text = ' ',
@@ -44,4 +44,44 @@ require("scrollbar").setup({
 
 
 
--- hello
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ... to test the scrollbar 😅
