@@ -27,22 +27,28 @@ return require('packer').startup(function(use)
   use { 'prochri/telescope-all-recent.nvim', requires = { { 'kkharji/sqlite.lua' } } }
   use { 'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons' } }
   use { 'nvim-tree/nvim-tree.lua', requires = { 'nvim-tree/nvim-web-devicons', } }
-  use { 'nvim-telescope/telescope.nvim', tag = '0.1.4', as = 'telescope', requires = { { 'nvim-lua/plenary.nvim' } } }
   use { 'folke/trouble.nvim', requires = { 'nvim-tree/nvim-web-devicons' } }
+  use { 'kevinhwang91/nvim-ufo', requires = { 'kevinhwang91/promise-async' } }
+  use { 'nvim-telescope/telescope.nvim', tag = '0.1.4', requires = { 'nvim-lua/plenary.nvim' } }
+  use { 'luukvbaal/statuscol.nvim' }
+  use { 'nvim-neorg/neorg', run = ":Neorg sync-parsers", requires = {
+    'nvim-lua/plenary.nvim',
+    'nvim-neorg/neorg-telescope'
+  } }
 
   use { 'VonHeikemen/lsp-zero.nvim', as = 'lspzero', branch = 'v3.x', requires = {
-    { 'williamboman/mason.nvim' },
-    { 'williamboman/mason-lspconfig.nvim' },
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
 
     -- LSP Support
-    { 'neovim/nvim-lspconfig' },
+    'neovim/nvim-lspconfig',
 
     -- Autocompletion
-    { 'hrsh7th/nvim-cmp' },
-    { 'hrsh7th/cmp-nvim-lsp' },
-    { 'L3MON4D3/LuaSnip' },
+    'hrsh7th/nvim-cmp',
+    'hrsh7th/cmp-nvim-lsp',
+    'L3MON4D3/LuaSnip',
 
     -- Cmp icons
-    { 'onsails/lspkind.nvim' },
+    'onsails/lspkind.nvim',
   } }
 end)

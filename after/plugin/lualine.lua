@@ -9,7 +9,7 @@ require('lualine').setup({
   ignore_focus = "NvimTree",
   sections = {
     lualine_a = {
-      { 'filename', separator = { left = '' }, padding = { right = 1 } },
+      { 'filename', separator = { left = '', right = '' }, padding = { right = 1 } },
     },
     lualine_b = { 'branch', 'diff', 'diagnostics' },
     lualine_c = { 'overseer' },
