@@ -31,6 +31,19 @@ return require('packer').startup(function(use)
   use { 'kevinhwang91/nvim-ufo', requires = { 'kevinhwang91/promise-async' } }
   use { 'nvim-telescope/telescope.nvim', tag = '0.1.4', requires = { 'nvim-lua/plenary.nvim' } }
   use { 'luukvbaal/statuscol.nvim' }
+  use { 'nvim-pack/nvim-spectre' }
+  use { 'petertriho/cmp-git', requires = { "nvim-lua/plenary.nvim" } }
+  use { 'folke/neodev.nvim' }
+
+  use {
+    'pwntester/octo.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+      'nvim-tree/nvim-web-devicons',
+    },
+  }
+
   use { 'nvim-neorg/neorg', run = ":Neorg sync-parsers", requires = {
     'nvim-lua/plenary.nvim',
     'nvim-neorg/neorg-telescope'
