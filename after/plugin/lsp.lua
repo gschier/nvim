@@ -51,3 +51,7 @@ vim.keymap.set('n', 'gff', function()
 end, {})
 vim.keymap.set('n', 'gfe', ':EslintFixAll<CR>', {})
 vim.keymap.set('n', 'gfp', ':silent !prettier --write %<CR>', {})
+
+-- Errors
+vim.keymap.set('n', '<leader>e', vim.diagnostic.goto_next, {})
+vim.keymap.set('n', '<leader>E', vim.diagnostic.goto_prev, {})

@@ -6,7 +6,7 @@ return require('packer').startup(function(use)
   use { 'rmagatti/auto-session', as = 'autosession' }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'tpope/vim-sleuth', as = 'sleuth' }
-  use { 'airblade/vim-gitgutter', as = 'gitgutter' }
+  use { 'lewis6991/gitsigns.nvim', as = 'gitsigns' }
   use { 'tpope/vim-fugitive', as = 'fugitive' }
   use { 'loctvl842/monokai-pro.nvim', as = 'monokai-pro' }
   use { 'catppuccin/nvim', as = 'catppuccin' }

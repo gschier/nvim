@@ -1,4 +1,4 @@
 require('autosave').setup({
   prompt_style = 'stdout',
-  events = { 'InsertLeave' },
+  events = { 'InsertLeave' } -- , 'TextChanged' },
 });

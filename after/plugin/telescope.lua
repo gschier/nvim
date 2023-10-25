@@ -6,7 +6,7 @@ telescope.setup({
   pickers = {
     find_files = {
       hidden = true,
-      ignore = true,
+      ignore = false,
     },
     buffers = {
       ignore_current_buffer = true,
