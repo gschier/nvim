@@ -24,7 +24,6 @@ cmp.setup({
     ['<C-d>'] = cmp.mapping.close_docs(),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<CR>'] = cmp.mapping.confirm({ select = false }),
-    ['<Tab>'] = cmp.mapping.confirm({ select = false }),
     ['<C-n>'] = cmp.mapping.select_next_item(),
     ['<C-e>'] = cmp.mapping.select_prev_item(),
   }),
