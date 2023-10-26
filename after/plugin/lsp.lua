@@ -19,19 +19,9 @@ require('mason-lspconfig').setup({
 
 vim.keymap.set('n', '<C-j>', '<cmd>lua vim.lsp.buf.hover()<cr>', {})
 vim.keymap.set('', '<F6>', '<cmd>lua vim.lsp.buf.rename()<cr>', {})
-
--- Only works in JS/TS
--- vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references({ include_declaration = false })<cr>', {})
--- vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', {})
 vim.keymap.set('n', 'gr', function() telescope.lsp_references({ include_declaration = false }) end, {})
-
 vim.keymap.set('n', 'gd', '<cmd>Telescope lsp_definitions<cr>', {})
 vim.keymap.set('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<cr>', {})
-vim.keymap.set('n', 'gff', function()
-  vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
-end, {})
-vim.keymap.set('n', 'gfe', ':EslintFixAll<CR>', {})
-vim.keymap.set('n', 'gfp', ':silent !prettier --write %<CR>', {})
 
 -- Errors
 vim.keymap.set('n', '<leader>e', vim.diagnostic.goto_next, {})

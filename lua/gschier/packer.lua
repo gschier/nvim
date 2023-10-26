@@ -35,8 +35,9 @@ return require('packer').startup(function(use)
   use { 'nvim-pack/nvim-spectre' }
   use { 'petertriho/cmp-git', requires = { "nvim-lua/plenary.nvim" } }
   use { 'folke/neodev.nvim' }
-  use { 'marko-cerovac/material.nvim' }
   use { 'folke/which-key.nvim' }
+  use { 'sbdchd/neoformat' }
+  use { 'chentoast/marks.nvim' }
 
   use {
     'pwntester/octo.nvim',
