@@ -1,7 +1,7 @@
 require('lualine').setup({
   extensions = { 'toggleterm', 'nvim-tree', 'overseer' },
   options = {
-    icons_enabled = true,
+    icons_enabled = false,
     theme = 'auto',
     section_separators = { left = '', right = '' },
     component_separators = { left = '|', right = '|' },
@@ -9,17 +9,21 @@ require('lualine').setup({
   ignore_focus = "NvimTree",
   sections = {
     lualine_a = {
-      { 'filename', separator = { left = '', right = '' }, padding = { right = 1 } },
+      { 'filename', separator = { left = '', right = '' } },
     },
-    lualine_b = { 'branch', 'diff', 'diagnostics' },
+    lualine_b = { 
+      {'branch', padding = { left = 2, right = 1 }},
+      'diff',
+      'diagnostics',
+    },
     lualine_c = { 'overseer' },
     lualine_x = {},
     lualine_y = {
-      { 'filetype', padding = { right = 1 } },
+       { 'filetype', padding = { left = 1, right = 2 } },
     },
     lualine_z = {
-      { 'progress', padding = { right = 1 } },
-      { 'location', separator = { right = '' }, padding = { left = 1 } },
+      'progress',
+      { 'location', separator = { right = '' } },
     }
   },
   inactive_sections = {

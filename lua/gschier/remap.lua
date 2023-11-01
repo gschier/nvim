@@ -1,15 +1,18 @@
 --------------------
 -- Colemak Remaps --
 
-vim.api.nvim_set_keymap("", "e", "k", { noremap = true });
-vim.api.nvim_set_keymap("", "n", "j", { noremap = true });
-vim.api.nvim_set_keymap("", "i", "l", { noremap = true });
+-- Core motions
+vim.api.nvim_set_keymap("", "e", "k", { noremap = true }); -- up
+vim.api.nvim_set_keymap("", "n", "j", { noremap = true }); -- down
+vim.api.nvim_set_keymap("", "i", "l", { noremap = true }); -- right (note, left is same in QWERTY)
 
-vim.api.nvim_set_keymap("", "s", "i", { noremap = true });
-vim.api.nvim_set_keymap("", "j", "n", { noremap = true });
-vim.api.nvim_set_keymap("", "k", "e", { noremap = true });
-vim.api.nvim_set_keymap("", "N", "J", { noremap = true });
-vim.api.nvim_set_keymap("", "J", "N", { noremap = true });
+-- Other things
+vim.api.nvim_set_keymap("v", "l", "i", { noremap = true }); -- For `viw` and similar
+vim.api.nvim_set_keymap("", "s", "i", { noremap = true }); -- For insert
+vim.api.nvim_set_keymap("", "j", "n", { noremap = true }); -- For search next
+vim.api.nvim_set_keymap("", "J", "N", { noremap = true }); -- For search pr
+vim.api.nvim_set_keymap("", "k", "e", { noremap = true }); -- ?
+vim.api.nvim_set_keymap("", "N", "J", { noremap = true }); -- For joining lines
 
 ------------------
 -- Other Remaps --

@@ -8,16 +8,13 @@ return require('packer').startup(function(use)
   use { 'tpope/vim-sleuth', as = 'sleuth' }
   use { 'lewis6991/gitsigns.nvim', as = 'gitsigns' }
   use { 'tpope/vim-fugitive', as = 'fugitive' }
-  use { 'loctvl842/monokai-pro.nvim', as = 'monokai-pro' }
   use { 'catppuccin/nvim', as = 'catppuccin' }
-  use { 'dracula/vim', as = 'dracula' }
   use { 'numToStr/Comment.nvim', as = 'comment' }
   use { 'NvChad/nvim-colorizer.lua', as = 'colorizer' }
   use { 'lukas-reineke/indent-blankline.nvim', as = 'indent-blankline' }
   use { 'windwp/nvim-autopairs', as = 'autopairs' }
   use { 'akinsho/toggleterm.nvim', as = 'toggleterm' }
   use { '0x00-ketsu/autosave.nvim', as = 'autosave' }
-  use { 'stevearc/overseer.nvim', as = 'overseer' }
   use { 'stevearc/dressing.nvim', as = 'dressing' }
   use { 'AndrewRadev/tagalong.vim', as = 'tagalong' }
   use { 'github/copilot.vim', as = 'copilot' }
@@ -32,12 +29,7 @@ return require('packer').startup(function(use)
   use { 'nvim-telescope/telescope.nvim', tag = '0.1.4', requires = { 'nvim-lua/plenary.nvim' } }
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use { 'luukvbaal/statuscol.nvim' }
-  use { 'nvim-pack/nvim-spectre' }
-  use { 'petertriho/cmp-git', requires = { "nvim-lua/plenary.nvim" } }
-  use { 'folke/neodev.nvim' }
-  use { 'folke/which-key.nvim' }
   use { 'sbdchd/neoformat' }
-  use { 'chentoast/marks.nvim' }
 
   use {
     'pwntester/octo.nvim',
@@ -47,11 +39,6 @@ return require('packer').startup(function(use)
       'nvim-tree/nvim-web-devicons',
     },
   }
-
-  use { 'nvim-neorg/neorg', run = ":Neorg sync-parsers", requires = {
-    'nvim-lua/plenary.nvim',
-    'nvim-neorg/neorg-telescope'
-  } }
 
   use { 'VonHeikemen/lsp-zero.nvim', as = 'lspzero', branch = 'v3.x', requires = {
     'williamboman/mason.nvim',
