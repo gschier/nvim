@@ -4,13 +4,13 @@ return require('packer').startup(function(use)
   use { 'wbthomason/packer.nvim' }
 
   use { 'rmagatti/auto-session', as = 'autosession' }
+  use { 'NvChad/nvim-colorizer.lua', as = 'colorizer' }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'tpope/vim-sleuth', as = 'sleuth' }
   use { 'lewis6991/gitsigns.nvim', as = 'gitsigns' }
   use { 'tpope/vim-fugitive', as = 'fugitive' }
   use { 'catppuccin/nvim', as = 'catppuccin' }
   use { 'numToStr/Comment.nvim', as = 'comment' }
-  use { 'NvChad/nvim-colorizer.lua', as = 'colorizer' }
   use { 'lukas-reineke/indent-blankline.nvim', as = 'indent-blankline' }
   use { 'windwp/nvim-autopairs', as = 'autopairs' }
   use { 'akinsho/toggleterm.nvim', as = 'toggleterm' }
