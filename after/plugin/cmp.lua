@@ -1,10 +1,9 @@
 local lspkind = require('lspkind')
 local cmp = require('cmp');
 cmp.setup({
-  -- TODO: Breaks autocomplete for everything else
-  -- sources = {
-  --   { name = "git" },
-  -- },
+  sources = {
+    { name = "nvim_lsp" },
+  },
   formatting = {
     format = lspkind.cmp_format({
       mode = 'symbol',

@@ -29,3 +29,7 @@ vim.api.nvim_set_keymap("", "<C-w>h", ":wincmd h<CR>", {})
 vim.api.nvim_set_keymap("", "<C-w>n", ":wincmd j<CR>", {})
 vim.api.nvim_set_keymap("", "<C-w>e", ":wincmd k<CR>", {})
 vim.api.nvim_set_keymap("", "<C-w>i", ":wincmd l<CR>", {})
+
+vim.keymap.set('n', '<leader>e', function()
+  vim.diagnostic.open_float(nil, { focus = false })
+end, { desc = 'Show diagnostics under cursor' })

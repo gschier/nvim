@@ -1,7 +1,7 @@
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
-vim.keymap.set("", "<C-\\>", ":NvimTreeFocus<CR>", {});
+vim.keymap.set("", "<C-\\>", ":NvimTreeToggle<CR>", {});
 
 -- OR setup with some options
 require('nvim-tree').setup({

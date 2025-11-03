@@ -1,21 +1,29 @@
-local telescope = require('telescope.builtin')
-local lsp_zero = require('lsp-zero')
-
-local lua_opts = lsp_zero.nvim_lua_ls()
-require('lspconfig').lua_ls.setup(lua_opts)
-
-lsp_zero.on_attach(function(_, bufnr)
-  -- see :help lsp-zero-keybindings
-  lsp_zero.default_keymaps({ buffer = bufnr })
-
-  -- Causes trouble with prettier-based projects with eslint configs :(
-  -- lsp_zero.buffer_autoformat()
-end)
-
-require('mason').setup({})
-require('mason-lspconfig').setup({
-  handlers = { lsp_zero.default_setup },
+vim.lsp.config('luals', {
+  cmd = {'lua-language-server'},
+  filetypes = {'lua'},
+  root_markers = {'.luarc.json', '.luarc.jsonc'},
 })
+
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+-- Rust (defaults)
+vim.lsp.config('rust_analyzer', {
+  cmd = { 'rust-analyzer' },
+  filetypes = { 'rust' },
+  root_markers = { 'Cargo.toml', 'rust-project.json', '.git' },
+  capabilities = capabilities,
+  settings = {
+    ['rust-analyzer'] = {
+      -- keep defaults; uncomment any of these if you want them:
+      -- cargo = { allFeatures = true },
+      -- check = { command = 'clippy' },          -- run clippy on save
+      -- procMacro = { enable = true },
+      -- inlayHints = { lifetimeElisionHints = { enable = true } },
+    },
+  },
+})
+
+vim.lsp.enable({'luals', 'rust_analyzer'})
 
 vim.keymap.set('n', '<C-j>', '<cmd>lua vim.lsp.buf.hover()<cr>', {})
 vim.keymap.set('', '<F6>', '<cmd>lua vim.lsp.buf.rename()<cr>', {})
